@@ -77,7 +77,7 @@ func TestTar(t *testing.T) {
 		// Extract an archive
 		f, _ := os.Open(testArchivePath)
 		defer f.Close()
-		data, err = SelectivelyExtractArchive(f, "", []string{"test/"}, 0)
+		data, err = SelectivelyExtractArchive(f, "", []string{"^test/"}, 0)
 		assert.Nil(t, err)
 
 		if c, n := data["test/test.txt"]; !n {

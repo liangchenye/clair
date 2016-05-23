@@ -24,6 +24,7 @@ import (
 	"io"
 	"io/ioutil"
 	"os/exec"
+	"regexp"
 	"strings"
 )
 
@@ -124,7 +125,7 @@ func SelectivelyExtractArchive(r io.Reader, prefix string, toExtract []string, m
 		// Determine if we should extract the element
 		toBeExtracted := false
 		for _, s := range toExtract {
-			if strings.HasPrefix(filename, s) {
+			if match, _ := regexp.MatchString(s, filename); match {
 				toBeExtracted = true
 				break
 			}
