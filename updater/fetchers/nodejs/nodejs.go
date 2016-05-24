@@ -30,7 +30,7 @@ const (
 	url                  = "https://api.nodesecurity.io/advisories"
 	cveURLPrefix         = "http://cve.mitre.org/cgi-bin/cvename.cgi?name="
 	updaterFlag          = "nodejsUpdater"
-	defaultNodejsVersion = "all"
+	defaultNodejsVersion = "1.0"
 	//FIXME: Add a suffix when an advisory is fixed `after` a certain version.
 	defaultVersionSuffix = "-1"
 )

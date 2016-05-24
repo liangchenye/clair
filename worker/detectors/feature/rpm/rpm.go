@@ -116,5 +116,5 @@ func (detector *RpmFeaturesDetector) Detect(data map[string][]byte) ([]database.
 // GetRequiredFiles returns the list of files required for Detect, without
 // leading /
 func (detector *RpmFeaturesDetector) GetRequiredFiles() []string {
-	return []string{"var/lib/rpm/Packages"}
+	return []string{"^var/lib/rpm/Packages"}
 }
